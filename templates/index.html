@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <title>Солянка</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>
+            {% if weather %}
+                Температура: По Цельсию(C): {{ weather.temp_C}}C, По Фаренгейту(F): {{ weather.temp_F}}F, ощущается как {{ weather.FeelsLikeC}}C
+            {% else %}
+                Сервис погоды не доступен
+            {% endif %}
+            </h2>
+            <h2>Значение времени последнего обновления market.yandex.ru:</h2>
+            <h3>{{ ym }}</h3>
+        </div>
+    </body>
+</html>
